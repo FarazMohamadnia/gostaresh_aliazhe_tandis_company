@@ -1,0 +1,131 @@
+.ServicesPage-body-style{
+  background: linear-gradient(to top right , red , black , red , black , gray , black);
+}
+
+.height-sizing-form{
+  min-height: 80vh;
+}
+
+.form-services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.title-services {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #ff0000;
+}
+
+.title-services::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title-services::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title-services::before,
+.title-services::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #ff0000;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form-services label {
+  position: relative;
+}
+
+.form-services label .input-services {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form-services label .input-services + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form-services label .input-services:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form-services label .input-services:focus + span,
+.form-services label .input-services:valid + span {
+  color: #ff0000;
+  top: 1px;
+  right: 7px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input-services {
+  font-size: medium;
+  text-align: right;
+}
+
+.submit-services {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: #ff0000;
+  transition: 0.4s;
+}
+
+.submit-services:hover {
+  background-color: #870000da;
+  transition: 0.4s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

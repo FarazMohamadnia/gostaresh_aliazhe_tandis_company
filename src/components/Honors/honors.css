@@ -1,0 +1,37 @@
+.honors-body-style{
+    background-color: black;
+    padding-bottom: 25px;
+}
+
+.swiper2 {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper2 .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: rgb(0, 0, 0);
+}
+
+.swiper2 .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.honors-video-section div{
+    margin: 15px;
+    min-width: 250px;
+    max-width: 500px;
+    width: 80%;
+}
+
+.honors-video-section video{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px white;
+}

@@ -1,0 +1,21 @@
+.Services-card-body{
+    width: 100%;
+    min-width: 250px;
+    max-width: 450px;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 10px 5px gray;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.Services-card-body img{
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid;
+    box-shadow: 0px 0px 10px 10px white;
+}
+
+.Services-card-body .overflow-auto{
+    height: 62%;
+}

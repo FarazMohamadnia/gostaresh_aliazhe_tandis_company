@@ -1,0 +1,21 @@
+.Advertising-story-container{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 8rem;
+    background-color: rgb(28, 28, 28);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-top: 19px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.Product-home-section-1{
+    color: white;
+    background: url('../asset/img/container/layered-steps-haikei\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

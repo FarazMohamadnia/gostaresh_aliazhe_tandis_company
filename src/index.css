@@ -1,13 +1,78 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont,'Casablanca','Maktab','Lalehzar', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: red;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.font-lalehar{
+  font-family: 'Lalehzar';
+}
+
+.font-Maktab{
+  font-family: 'Maktab';
+}
+
+.font-Casablanca{
+  font-family: 'Casablanca';
+}
+
+.display-flex-config{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-flex-confi-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@font-face {
+  font-family: 'Lalehzar';
+  src: url('./asset/font/Lalezar-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maktab';
+  src: url('./asset/font/MaktabRita-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Casablanca';
+  src: url('./asset/font/Far_Casablanca.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
