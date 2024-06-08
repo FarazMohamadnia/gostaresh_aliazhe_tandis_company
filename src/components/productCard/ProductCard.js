@@ -2,7 +2,7 @@ import './ProductCard.css'
 import img from '../../asset/img/Logo/imgLogo.jpg'
 export default function ProductCard(){
     return(
-        <div className='product-card-body-style font-lalehar m-3'>
+        <div className='product-card-body-style font-lalehar m-1'>
             <div style={{
                 backgroundImage:`url(${img})`
             }} className='image-body-style'></div>

@@ -1,0 +1,75 @@
+.product-page-background{
+    background: linear-gradient(to top , gray , black ,white);
+}
+
+.ui-input-container {
+  position: relative;
+  width: 300px;
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.ui-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  font-size: 1em;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.ui-input:focus {
+  border-color: #ff0000;
+}
+
+.ui-input-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ff0000;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.ui-input:focus + .ui-input-underline {
+  transform: scaleX(1);
+}
+
+.ui-input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(255, 99, 99, 0.1);
+  transition: width 0.3s;
+}
+
+.ui-input:focus ~ .ui-input-highlight {
+  width: 100%;
+}
+
+.ui-input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: color 0.3s;
+}
+
+.ui-input:focus ~ .ui-input-icon {
+  color: #ff0000;
+}
+
+.ui-input-icon svg {
+  width: 20px;
+  height: 20px;
+}
+  
