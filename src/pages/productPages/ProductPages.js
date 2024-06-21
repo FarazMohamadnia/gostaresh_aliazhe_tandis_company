@@ -1,15 +1,40 @@
+import { useEffect, useState } from "react";
 import Footer from "../../components/footer/footer";
 import Navbarr from "../../components/navbar/Navbar";
 import ProductCard from "../../components/productCard/ProductCard";
 import './ProductPages.css'
+import axios from "axios";
+import { getProduct, searchProducts } from "../../services/api/ApiConfig";
 export default function ProductsPage(){
+    const [data , setdata]=useState([]);
+
+    const searchHanddler =async (e) =>{
+      const value = e.target.value;
+      if(value){
+        const response = await axios.get(`${searchProducts}?t=${value}`);
+        setdata(response.data.data);
+      }else{
+        const response = await axios.get(getProduct);
+        setdata(response.data.data)
+      }
+    }
+
+    const dataHandller =async ()=>{
+      const response = await axios.get(getProduct);
+      setdata(response.data.data)
+    }
+
+    useEffect(()=>{
+      dataHandller()
+    },[]);
+
     return(
         <div className="product-page-background">
             <Navbarr />
             <div>
                 <div className="ui-input-container font-lalehar">
                   <input
-                    required=""
+                    onChange={searchHanddler}
                     placeholder="کالای مورد نظر را سرچ کنید"
                     className="ui-input"
                     type="text"
@@ -32,10 +57,11 @@ export default function ProductsPage(){
             <h1 className="font-lalehar text-center">محصولات</h1>
             <div>
                 <div className="d-flex flex-wrap justify-content-center">
-                    <ProductCard /> <ProductCard /> <ProductCard /><ProductCard />
-                </div>
-                <div>
-                    jlklkjlkjkl
+                  {
+                    data.map(data =>(
+                      <ProductCard {...data}/>
+                    ))
+                  }
                 </div>
             </div>
             <Footer />

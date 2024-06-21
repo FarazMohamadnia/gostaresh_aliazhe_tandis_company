@@ -35,7 +35,7 @@ export default function Honors(){
 
     return(
         <div className='honors-body-style text-light'>
-            <h3 className='font-lalehar text-center py-4'>افتخارات ما</h3>
+            <h3 data-aos="fade-left" className='font-lalehar text-center py-4'>افتخارات ما</h3>
             <div className='mb-5'>
                 <Swiper
                   slidesPerView={1}
@@ -69,7 +69,7 @@ export default function Honors(){
                 </Swiper>
             </div>
             <div className='honors-video-section d-flex justify-content-center flex-wrap'>
-                    <div className='text-center'>
+                    <div data-aos="fade-left" className='text-center'>
                             <p className='font-lalehar'>
                                 نمایشگاه سال ۱۳۹۹
                             </p>
@@ -82,7 +82,7 @@ export default function Honors(){
                               controls = {preVideo}
                             />
                     </div>
-                    <div className='text-center'>
+                    <div data-aos="fade-left" className='text-center'>
                             <p className='font-lalehar'>
                                 نمایشگاه سال ۱۴۰۰
                             </p>
@@ -95,7 +95,7 @@ export default function Honors(){
                               controls = {preVideo} 
                             />
                     </div>
-                    <div className='text-center'>
+                    <div data-aos="fade-left" className='text-center'>
                             <p className='font-lalehar'>
                                 نمایشگاه سال ۱۴۰۱
                             </p>

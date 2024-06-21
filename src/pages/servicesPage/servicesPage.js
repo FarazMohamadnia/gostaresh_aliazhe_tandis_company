@@ -4,8 +4,42 @@ import Navbarr from '../../components/navbar/Navbar'
 import './servicesPage.css'
 
 import img from '../../asset/img/Logo/imgLogo.jpg'
+import { useState } from 'react'
+import axios from 'axios'
+import { getusers } from '../../services/api/ApiConfig'
+import Swal from 'sweetalert2'
 
 export default function ServicesPage(){
+    const [data , setdata]=useState({});
+    const [BtnContoller , setBtnContoller] = useState(false)
+    const dataHandller =(e)=>{
+        const name = e.target.name
+        const value = e.target.value
+
+        setdata({
+            ...data , 
+            [name] : value
+        });
+
+    }
+
+    const sendData =async ()=>{
+        setBtnContoller(true)
+        const response = await axios.post(getusers , data);
+        setBtnContoller(false)
+        if(response.status == 201){
+            Swal.fire({
+                title:'اطلاعات شما با موفقیت ارسال شد',
+                icon:'success'
+            })
+        }else{
+            Swal.fire({
+                title:'مشکلی در ارسال اطلاعات شما پیش آمده ،لطفا دوباره امتحان کنید',
+                icon:'error'
+            })
+        }
+    }
+
     return(
         <div className='vw-100 ServicesPage-body-style'>
             <Navbarr />
@@ -26,26 +60,26 @@ export default function ServicesPage(){
                             <p className="message">برای گرفتن هرگونه خدمات از شرکت ما اطلاعات خود را ارسال کنید تا با شما تماس بگیریم</p>
                                 <div className="flex">
                                 <label>
-                                    <input className="input-services" type="text" placeholder="مثال : محمد" required="" />
+                                    <input className="input-services" onChange={dataHandller} name='firstName' type="text" placeholder="مثال : محمد" required="" />
                                     <span>نام</span>
                                 </label>
 
                                 <label>
-                                    <input className="input-services" type="text" placeholder="مثال : محمدی" required="" />
+                                    <input className="input-services" onChange={dataHandller} name='lastName' type="text" placeholder="مثال : محمدی" required="" />
                                     <span>نام خانوادگی</span>
                                 </label>
                             </div>  
 
                             <label>
-                                <input className="input-services" type="number" placeholder="مثال: 09121111111" required="" />
+                                <input className="input-services" onChange={dataHandller} name='phoneNumber' type="number" placeholder="مثال: 09121111111" required="" />
                                 <span>شماره تماس</span>
                             </label> 
 
                             <label>
-                                <input className="input-services" type="text" placeholder="مثال: a@gmail.com" required="" />
+                                <input className="input-services" onChange={dataHandller} name='email' type="text" placeholder="مثال: a@gmail.com" required="" />
                                 <span>ایمیل</span>
                             </label>
-                            <button className="submit-services">Submit</button>
+                            <button disabled={BtnContoller} onClick={sendData} type='button' className="submit-services">Submit</button>
                         </form>
                     </div>
                 </Col>

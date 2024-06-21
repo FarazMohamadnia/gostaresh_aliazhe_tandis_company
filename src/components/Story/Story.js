@@ -14,7 +14,6 @@ export default function AdvertisingStory({image1 , image2}){
     let setTime
     const [storyTime, setstoryTime] = useState(time)
     const [activeStory , setactiveStory] = useState(true)
-    
     const closeBtnHandler = ()=>{
         //Error handling => Prevent reruns
         if(!closebtn.current.className.includes('d-none')){

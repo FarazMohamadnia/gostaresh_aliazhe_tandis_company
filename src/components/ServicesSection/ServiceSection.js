@@ -1,13 +1,18 @@
 import './ServiceSection.css';
 import img from '../../asset/img/Logo/imgLogo.jpg';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 
 export default function ServicesProvided(){
     return(
         <div className='bg-dark text-light pb-5 '>
-            <h1 className='text-center font-Casablanca pt-3'> تامین مواد اولیه ریخته گری</h1>
+            <h1 data-aos="fade-left" className='text-center font-Casablanca pt-3'> تامین مواد اولیه ریخته گری</h1>
             <div className='d-flex flex-wrap justify-content-center'>
-                <div className='Services-card-body'>
+                <div data-aos="flip-left" className='Services-card-body'>
                     <div className='d-flex justify-content-between align-items-center p-3 border-bottom'>
                         <p className='font-Casablanca fs-5'>۱- ماسه و سنگ</p>
                         <img src={img}/>
@@ -19,7 +24,7 @@ export default function ServicesProvided(){
                         </p>
                     </div>
                 </div>
-                <div className='Services-card-body'>
+                <div data-aos="flip-left" className='Services-card-body'>
                     <div className='d-flex justify-content-between align-items-center p-3 border-bottom'>
                         <p className='font-Casablanca fs-5'>۲- ماسه و سنگ</p>
                         <img src={img}/>
@@ -30,31 +35,9 @@ export default function ServicesProvided(){
                         </p>
                     </div>
                 </div>
-                <div className='Services-card-body'>
+                <div data-aos="flip-left" className='Services-card-body'>
                     <div className='d-flex justify-content-between align-items-center p-3 border-bottom'>
                         <p className='font-Casablanca fs-5'>۳- ماسه و سنگ</p>
-                        <img src={img}/>
-                    </div>
-                    <div className='overflow-auto  p-3'>
-                        <p>
-                              سیمنسنمیتستن یتشنمتی رریب 
-                        </p>
-                    </div>
-                </div>
-                <div className='Services-card-body'>
-                    <div className='d-flex justify-content-between align-items-center p-3 border-bottom'>
-                        <p className='font-Casablanca fs-5'>۴- ماسه و سنگ</p>
-                        <img src={img}/>
-                    </div>
-                    <div className='overflow-auto  p-3'>
-                        <p>
-                              سیمنسنمیتستن یتشنمتی رریب 
-                        </p>
-                    </div>
-                </div>
-                <div className='Services-card-body'>
-                    <div className='d-flex justify-content-between align-items-center p-3 border-bottom'>
-                        <p className='font-Casablanca fs-5'>۵- ماسه و سنگ</p>
                         <img src={img}/>
                     </div>
                     <div className='overflow-auto  p-3'>

@@ -1,0 +1,177 @@
+.backgrand-body-style-dashboard{
+    background-color: rgb(0, 0, 68);
+    min-height: 100vh;
+}
+
+.comments-dashboard-cart{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin: 10px;
+}
+.product-dashboard-card{
+    width: 300px;
+    max-height: 300px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.form-controller-size{
+    min-width: 250px;
+    box-shadow: 0px 0px 5px 1px white;
+    @media (min-width : 769px) {
+        max-width: 350px;
+    }
+}
+
+.image-form-controller{
+    text-align: center;
+}
+
+
+.image-form-controller img{
+    min-width: 230px;
+    max-width: 400px;
+    width: 50%;
+    border: 1px solid white;
+    box-shadow:0px 0px 6px 1px white ;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.image-form-controller input::file-selector-button{
+    padding: 8px;
+    background-color: black;
+    color:white ;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.image-form-controller input{
+    text-align: center;
+    margin: auto;
+    color: white;
+    width: 82px;
+    margin-top: 15px;
+}
+
+.image-form-controller input::file-selector-button:hover{
+    background-color: rgb(92, 0, 0);
+    color: rgb(221, 221, 221);
+    transition: 0.5s;
+}
+
+.image-form-controller button{
+    margin: auto;
+    margin-top: 30px;
+    min-width: 150px;
+    max-width: 400px;
+    width: 50%;
+    padding: 3px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px 2px white;
+    transition: 0.6s;
+    margin-bottom: 25px;
+
+}
+
+
+.image-form-controller button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transition: 0.6s;
+}
+
+.product-card-dashboard{
+    min-width: 250px;
+    max-width: 380px;
+    width: 70%;
+    background-color: rgb(0, 0, 0);
+    max-height: 380px;
+    overflow-y:scroll;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+
+.product-card-dashboard img{
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.product-card-dashboard p{
+    text-align: right;
+}
+
+.input-type-file-story-section{
+    @media (max-width : 400px) {
+        width: 92px;
+    }
+}
+.input-type-file-story-section::file-selector-button{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s;
+    cursor: pointer;
+    @media (max-width : 400px) {
+        width: 250px;
+    }
+}
+
+.input-type-file-story-section::file-selector-button:hover{
+    background-color: gray;
+    color: black;
+    transition: 0.4s;
+}
+
+.send-Story-Data-BTN{
+    width: 50%;
+    padding: 4px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 1px white;
+    transition: 0.5s;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.send-Story-Data-BTN:hover{
+    box-shadow: 0px 0px 6px 1px rgb(119, 119, 119);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+
+.story-card-body-dashboard{
+    min-width: 200px;
+    max-width: 350px;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    max-height: 350px;
+    overflow-y: scroll;
+}

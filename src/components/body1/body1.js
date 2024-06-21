@@ -10,23 +10,25 @@ import 'swiper/css/navigation';
 
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
+
+
 export default function Body1(){
     return(
             <div className='body1-container d-md-flex font-lalehar'>
                 <Col md={'6'} className=' display-flex-config-column p-3 text-center'>
-                    <h2>
+                    <h2 data-aos="fade-left">
                         راجب ما
                     </h2>
-                    <img className='about-us-image' src={img}/>
-                    <p className='text-start mt-3 body1-about-us-p'>
+                    <img data-aos="zoom-in" className='about-us-image' src={img}/>
+                    <p data-aos="fade-left" className='text-start mt-3 body1-about-us-p'>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                     </p>
                 </Col>
                 <Col md={'6'} className=' display-flex-config-column  p-3 text-center'>
-                    <h2>
+                    <h2 data-aos="zoom-in">
                         تیم ما
                     </h2>
-                    <div className='mt-3'>
+                    <div className='mt-3' data-aos="flip-left">
                     <Swiper
                       effect={'flip'}
                       grabCursor={true}

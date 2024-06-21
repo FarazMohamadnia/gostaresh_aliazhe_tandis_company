@@ -1,9 +1,10 @@
 import './products.css';
 import {Link} from 'react-router-dom';
-import img from '../../asset/img/Logo/imgLogo.jpg'
+import img from '../../asset/img/Logo/imgLogo.jpg';
+
 export default function Product(){
     return(
-        <div className='Product-body'>
+        <div data-aos="zoom-in" className='Product-body'>
             <Link to={'/'}>
                 <div
                 style={{backgroundImage : `url(${img})`}}

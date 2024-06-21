@@ -10,7 +10,43 @@ import { FaInstagram ,FaTelegramPlane , FaWhatsapp } from "react-icons/fa";
 import { TbMessageCircle2Filled } from "react-icons/tb";
 
 import {Link} from 'react-router-dom'
+import { useState } from 'react';
+import axios from 'axios';
+import { getComments } from '../../services/api/ApiConfig';
+import Swal from 'sweetalert2';
 export default function Footer(){
+    const [Data , setData] =useState({});
+    const [deactiveBTN , setdeactiveBTN] = useState(false);
+    const DataHandller = (e)=>{
+        const name = e.target.name;
+        const value = e.target.value;
+
+        setData({
+            ...Data ,
+            [name] : value
+        });
+    }
+
+    const commentSendHandller = async()=>{
+        setdeactiveBTN(true)
+        const response =await axios.post(getComments , Data);
+        setdeactiveBTN(false)
+        console.log(response);
+        console.log(response.status);
+        if(response.status == 201){
+            setdeactiveBTN(true)
+            Swal.fire({
+                title: "کامنت شما با موفقیت ارسال شد",
+                icon: "success"
+            });
+        }else{
+            Swal.fire({
+                title: "مشکلی در ارسال پیام پیش امده دوباره امتحان کنید",
+                icon: "error"
+            });
+        }
+
+    }
     return(
         <div className='bg-black'>
             <div className='footer-body-style flex-sm-wrap-reverse font-lalehar'>
@@ -18,12 +54,12 @@ export default function Footer(){
                     <Form>
                         <Form.Label><TbMessageCircle2Filled />-ارسال پیام به ما</Form.Label>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                          <Form.Control className='text-start' type="email" placeholder="موضوع" />
+                          <Form.Control onChange={DataHandller} name='title' className='text-start' type="email" placeholder="موضوع" />
                         </Form.Group>
                         <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
-                          <Form.Control className='h-50' as="textarea" rows={3} placeholder='متن پیام' />
+                          <Form.Control onChange={DataHandller} name='text' className='h-50' as="textarea" rows={3} placeholder='متن پیام' />
                         </Form.Group>
-                        <Button className='w-100'>ارسال پیام</Button>
+                        <Button onClick={commentSendHandller} disabled={deactiveBTN} className='w-100'>ارسال پیام</Button>
                     </Form>
                 </Col>
                     <Col className='footer-text-style' sm={6} md={3}>

@@ -1,0 +1,7 @@
+export const PostEmail = 'http://localhost:1500/api/owner/sendEmail'
+export const ownerLogin = 'http://localhost:1500/api/owner/Login'
+export const getusers = 'http://localhost:1500/api/users'
+export const getProduct = 'http://localhost:1500/api/products'
+export const getStory = 'http://localhost:1500/api/Story'
+export const getComments = 'http://localhost:1500/api/comments'
+export const searchProducts = 'http://localhost:1500/api/products/search'
