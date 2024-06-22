@@ -34,10 +34,10 @@ function Navbarr() {
    id={`offcanvasNavbarDropdown-md-${'md'}`}
  >
  <div className='NavDropdown-body-style'>
-   <NavDropdown.Item href="">۰۹۱۲۲۰۲۳۹۲</NavDropdown.Item>
-   <NavDropdown.Item href="">۰۹۱۲۲۰۲۳۹۲</NavDropdown.Item>
+   <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
+   <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
    <NavDropdown.Divider />
-   <NavDropdown.Item href="">ایمیل</NavDropdown.Item>
+   <NavDropdown.Item href="">۰۹۱۲۰۷۰۹۸۲۲</NavDropdown.Item>
  </div>
  </NavDropdown>
                   <NavLink className='font-lalehar align-self-start' to="/"><FaHome />-خانه</NavLink>

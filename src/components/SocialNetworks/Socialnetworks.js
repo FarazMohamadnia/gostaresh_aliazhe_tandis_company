@@ -8,17 +8,17 @@ export default function SocialMedia(){
         <h3 data-aos="fade-left" className='font-lalehar text-center pb-4 text-light'>شبکه های اجتماعی</h3>
             <div className="SocialMedia-section-style">
                 <div data-aos="flip-down">
-                    <Link to={'/'}><img className='eitaa-logo-style' src={eitaaLogo}/></Link>
+                    <Link to={'https://eitaa.com/Gostareshaliazh'}><img className='eitaa-logo-style' src={eitaaLogo}/></Link>
                 </div>
 
                 <div data-aos="flip-down">
-                    <Link to={'/'}><FaInstagram size={'2rem'} color='red'/></Link>
+                    <Link to={'https://www.instagram.com/gostareshaliazh?igsh=cG43bjBtbnMyc3dv'}><FaInstagram size={'2rem'} color='red'/></Link>
                 </div>
                 <div data-aos="flip-down">
-                    <Link to={'/'} ><FaTelegramPlane size={'2rem'} color='blue'/></Link>
+                    <Link to={'https://t.me/Gostareshaliazh'} ><FaTelegramPlane size={'2rem'} color='blue'/></Link>
                 </div>
                 <div data-aos="flip-down">
-                    <Link to={'/'}><FaWhatsapp size={'2rem'} color='green'/></Link>
+                    <Link to={'https://wa.me/989120709822'}><FaWhatsapp size={'2rem'} color='green'/></Link>
                 </div>
             </div>
         </div>

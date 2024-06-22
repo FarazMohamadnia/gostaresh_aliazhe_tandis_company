@@ -11,11 +11,12 @@
 
 .Services-card-body img{
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 1px solid;
     box-shadow: 0px 0px 10px 10px white;
 }
 
 .Services-card-body .overflow-auto{
-    height: 62%;
+    height: 58%;
 }

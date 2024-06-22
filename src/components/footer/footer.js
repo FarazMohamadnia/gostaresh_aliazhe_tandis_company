@@ -66,26 +66,26 @@ export default function Footer(){
                         <p>صفحه ها</p>
                         <div>
                             <Link to={'/'}><p><FaHome />-خانه</p></Link>
-                            <Link to={'/'}><p><FaCartPlus />-محصولات</p></Link>
-                            <Link to={'/'}><p><FaEnvelopeOpenText /> -ارائه خدمات</p></Link>
+                            <Link to={'/product'}><p><FaCartPlus />-محصولات</p></Link>
+                            <Link to={'/services'}><p><FaEnvelopeOpenText /> -ارائه خدمات</p></Link>
                         </div>
                     </Col>
                     <Col className='footer-text-style' sm={6} md={3}>
                         <p>شبکه های اجتماعی</p>
                         <div>
-                            <Link to={'/'}><p><FaInstagram />-اینستاگرام</p></Link>
-                            <Link to={'/'}><p><FaWhatsapp />-واتساپ</p></Link>
-                            <Link to={'/'}><p><FaTelegramPlane />-تلگرام</p></Link>
+                            <Link to={'https://www.instagram.com/gostareshaliazh?igsh=cG43bjBtbnMyc3dv'}><p><FaInstagram />-اینستاگرام</p></Link>
+                            <Link to={'https://wa.me/989120709822'}><p><FaWhatsapp />-واتساپ</p></Link>
+                            <Link to={'https://t.me/Gostareshaliazh'}><p><FaTelegramPlane />-تلگرام</p></Link>
                         </div>
                     </Col>
             </div>
             <div className='text-light p-3 font-lalehar d-sm-flex flex-sm-row-reverse'>
                 <Col sm={6} className='p-2'>
-                    <p>آدرس : تهران ، فلکه اول تهرانپارس ، روبه روی پاساژ سپید ، مجتمع ۱۱۱۱۱ ،پلاک۹۰ واحد ۱ </p>
+                    <p>آدرس : تهران، تهرانپارس، فلکه اول، خیابان برادران قانع، پلاک 39، واحد 9 </p>
                     <div className='d-flex justify-content-around d-md-block '>
-                        <p>شماره تماس</p>
-                        <p>شماره تماس</p>
-                        <p>شماره تماس</p>
+                        <p>تلفن : 02177713034 </p>
+                        <p>تلفن : 02177713035 </p>
+                        <p>شماره موبایل : 09120709822</p>
                     </div>
                 </Col>
                 <Col sm={6}>
