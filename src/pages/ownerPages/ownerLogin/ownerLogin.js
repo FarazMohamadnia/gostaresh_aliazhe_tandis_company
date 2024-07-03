@@ -49,6 +49,7 @@ export default function Login(){
     }
     
     const sendData =async ()=>{
+      try{
         const response = await axios.post(ownerLogin , data);
         
         if(response.status == 200){
@@ -56,13 +57,15 @@ export default function Login(){
             Cookies.set('Authorization', encryptedText, { expires: 15 });
             Cookies.set('ownerLogin', true , { expires: 15 });
             navigate('/owner/dashboard');
-        }else{
-            Swal.fire({
-                title: "Error!!",
-                text: "try again",
-                icon: "error"
-              });
-        }
+        }        
+      }catch(err){
+        Swal.fire({
+          title: "Error!!",
+          text: "try again",
+          icon: "error"
+        });
+
+      }
     }
 
     return(

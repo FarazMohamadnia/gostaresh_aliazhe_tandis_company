@@ -117,6 +117,7 @@ export default function Dashboard(){
         const formData = new FormData();
         formData.append('image1', SendStory.image1);
         formData.append('image2', SendStory.image2);
+        try{
         const response = await axios.post(getStory, formData , {
             headers :{
                 'Content-Type': 'multipart/form-data', 
@@ -130,7 +131,9 @@ export default function Dashboard(){
                 icon:'success',
                 title:'اطلاعات با موفقیت ارسال شد'
             });
-        }else{
+        }
+        }catch(err){
+            setloadingStory(false);
             Swal.fire({
                 icon:'error',
                 title:'خطا در ارسال اطلاعات ',
@@ -148,6 +151,7 @@ export default function Dashboard(){
         formData.append('title', SendProduct.title);
         formData.append('text', SendProduct.text);
         formData.append('image', SendProduct.image);
+        try{
         const response = await axios.post(getProduct, formData , {
             headers :{
                 'Content-Type': 'multipart/form-data',
@@ -161,7 +165,11 @@ export default function Dashboard(){
                 icon:'success',
                 title:'اطلاعات با موفقیت ارسال شد'
             });
-        }else{
+        }
+
+        }catch(err){
+            setdeactiveBtn(false)
+            setloadingProducts(false);
             Swal.fire({
                 icon:'error',
                 title:'خطا در ارسال اطلاعات ',
@@ -189,6 +197,7 @@ export default function Dashboard(){
     const deleteUserHandller =async (e)=>{
         const Token = DeHashFunction();
         const Id = e.target.id;
+        try{
         const response = await axios.delete(`${getusers}/${Id}` , {
             headers:{
                 Authorization: Token
@@ -200,7 +209,8 @@ export default function Dashboard(){
                 icon:'success',
                 title:'اطلاعات این یوزر با موفقیت حذف شد'
             })
-        }else{
+        }
+        }catch(err){
             Swal.fire({
                 icon:'error',
                 title:'خطا در حذف کاربر ، لطفا دوباره امتحان کنید !'
@@ -226,6 +236,7 @@ export default function Dashboard(){
     const deleteCommentsHandller =async (e)=>{
         const Token = DeHashFunction();
         const Id = e.target.id;
+        try{
         const response = await axios.delete(`${getComments}/${Id}` , {
             headers:{
                 Authorization: Token
@@ -237,7 +248,8 @@ export default function Dashboard(){
                 icon:'success',
                 title:'این کامنت با موفقیت حذف شد'
             })
-        }else{
+        }
+        }catch(err){
             Swal.fire({
                 icon:'error',
                 title:'خطا در حذف کامنت ، لطفا دوباره امتحان کنید !'
@@ -263,6 +275,7 @@ export default function Dashboard(){
     const deleteStoryHandller =async (e)=>{
         const Token = DeHashFunction();
         const Id = e.target.id;
+        try{
         const response = await axios.delete(`${getStory}/${Id}` , {
             headers:{
                 Authorization: Token
@@ -274,7 +287,8 @@ export default function Dashboard(){
                 icon:'success',
                 title:'این استوری با موفقیت حذف شد'
             })
-        }else{
+        }
+        }catch(err){
             Swal.fire({
                 icon:'error',
                 title:'خطا در حذف استوری ، لطفا دوباره امتحان کنید !'
@@ -300,6 +314,7 @@ export default function Dashboard(){
     const deleteProductHandller =async (e)=>{
         const Token = DeHashFunction();
         const Id = e.target.id;
+        try{
         const response = await axios.delete(`${getProduct}/${Id}` , {
             headers:{
                 Authorization: Token
@@ -311,11 +326,13 @@ export default function Dashboard(){
                 icon:'success',
                 title:'این محصول با موفقیت حذف شد'
             })
-        }else{
+        }
+        }catch(err){
             Swal.fire({
                 icon:'error',
                 title:'خطا در حذف محصول ، لطفا دوباره امتحان کنید !'
             })
+
         }
     }
 

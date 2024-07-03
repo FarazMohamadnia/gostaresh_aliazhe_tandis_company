@@ -29,6 +29,7 @@ export default function Footer(){
 
     const commentSendHandller = async()=>{
         setdeactiveBTN(true)
+        try{
         const response =await axios.post(getComments , Data);
         setdeactiveBTN(false)
         console.log(response);
@@ -39,12 +40,15 @@ export default function Footer(){
                 title: "کامنت شما با موفقیت ارسال شد",
                 icon: "success"
             });
-        }else{
+        }
+        }catch(err){
+            setdeactiveBTN(false)
             Swal.fire({
                 title: "مشکلی در ارسال پیام پیش امده دوباره امتحان کنید",
                 icon: "error"
             });
-        }
+
+        }        
 
     }
     return(

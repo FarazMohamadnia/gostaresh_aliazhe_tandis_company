@@ -7,9 +7,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import img from '../../asset/img/container/stacked-waves-haikei.png';
+import img from '../../asset/img/homePageImages/Team/teamImg1.jpg';
+import img1 from '../../asset/img/homePageImages/Team/teamImg2.jpg';
+import img2 from '../../asset/img/homePageImages/Team/teamImg3.jpg';
+import img3 from '../../asset/img/homePageImages/Team/teamImg4.jpg';
+import img4 from '../../asset/img/homePageImages/Team/teamImg5.jpg';
+import img5 from '../../asset/img/homePageImages/Team/teamImg6.jpg';
 
-import playIcon from '../../asset/img/playIcon/icon.jpg'
+
+import video from '../../asset/video/FILE 2024-07-01 18:03:47.mp4'
 
 // import required modules
 import { Pagination } from 'swiper/modules';
@@ -35,7 +41,7 @@ export default function Honors(){
 
     return(
         <div className='honors-body-style text-light'>
-            <h3 data-aos="fade-left" className='font-lalehar text-center py-4'>افتخارات ما</h3>
+            <h3 data-aos="fade-left" className='font-lalehar text-center py-4'>نمایشگاه مواد اولیه ریخته گری</h3>
             <div className='mb-5'>
                 <Swiper
                   slidesPerView={1}
@@ -61,50 +67,24 @@ export default function Honors(){
                   className="swiper2"
                 >
                   <SwiperSlide><img src={img}/></SwiperSlide>
-                  <SwiperSlide><img src={img}/></SwiperSlide>
-                  <SwiperSlide><img src={img}/></SwiperSlide>
-                  <SwiperSlide><img src={img}/></SwiperSlide>
-                  <SwiperSlide><img src={img}/></SwiperSlide>
-                  <SwiperSlide><img src={img}/></SwiperSlide>
+                  <SwiperSlide><img src={img1}/></SwiperSlide>
+                  <SwiperSlide><img src={img2}/></SwiperSlide>
+                  <SwiperSlide><img src={img3}/></SwiperSlide>
+                  <SwiperSlide><img src={img4}/></SwiperSlide>
+                  <SwiperSlide><img src={img5}/></SwiperSlide>
                 </Swiper>
             </div>
             <div className='honors-video-section d-flex justify-content-center flex-wrap'>
                     <div data-aos="fade-left" className='text-center'>
                             <p className='font-lalehar'>
-                                نمایشگاه سال ۱۳۹۹
+                               ویدیو نمایشگاه سال ۱۴۰۲
                             </p>
                             <video
                               ref={el => videoRefs.current[0] = el}
-                              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                              src={video}
                               onPlay={() => handlePlay(0)}
                               onClick={playVideo}
-                              poster={playIcon}
-                              controls = {preVideo}
-                            />
-                    </div>
-                    <div data-aos="fade-left" className='text-center'>
-                            <p className='font-lalehar'>
-                                نمایشگاه سال ۱۴۰۰
-                            </p>
-                            <video
-                              ref={el => videoRefs.current[1] = el}
-                              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-                              onPlay={() => handlePlay(1)}
-                              onClick={playVideo}
-                              poster={playIcon}
-                              controls = {preVideo} 
-                            />
-                    </div>
-                    <div data-aos="fade-left" className='text-center'>
-                            <p className='font-lalehar'>
-                                نمایشگاه سال ۱۴۰۱
-                            </p>
-                            <video
-                              ref={el => videoRefs.current[2] = el}
-                              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-                              onPlay={() => handlePlay(2)}
-                              onClick={playVideo}
-                              poster={playIcon}
+                              // poster={playIcon}
                               controls = {preVideo}
                             />
                     </div>

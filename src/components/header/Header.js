@@ -18,7 +18,7 @@ export default function Header1() {
     <>
       <Swiper
         style={{
-          '--swiper-navigation-color': '#000',
+          '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
         }}
         speed={600}
@@ -33,7 +33,7 @@ export default function Header1() {
         <div
           slot="container-start"
           className="parallax-bg"
-          data-swiper-parallax="-23%"
+          data-swiper-parallax="23%"
         ></div>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">

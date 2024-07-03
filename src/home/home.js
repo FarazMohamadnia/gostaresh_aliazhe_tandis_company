@@ -26,7 +26,8 @@ import axios from "axios";
 import { getStory } from "../services/api/ApiConfig";
 
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
+import BodyContainerSection from '../components/Bodycontainer/BodyContainer'
 // ..
 AOS.init({
     delay: 75, 
@@ -126,17 +127,31 @@ const productList =[{
 export default function Home(){
     const [loading , setloading] = useState(true);
     const [storyData , setstoryData] = useState([]);
-
+    const [loadingController , setloadingController] = useState(true)
     const storyDataHandller =async ()=>{
         const response = await axios.get(getStory);
         setstoryData(response.data.data);
     }
 
+    const loadedPages = ()=>{
+        const currentTime = new Date().getTime();
+        const expirationTime = localStorage.getItem('expirationTime');
+        
+        if (expirationTime && currentTime < parseInt(expirationTime)) {
+          setloading(false);
+        } else {
+          localStorage.removeItem('hasLoadedBefore');
+          localStorage.removeItem('expirationTime');
+          setTimeout(() => {
+            setloading(false);
+            localStorage.setItem('hasLoadedBefore', 'true');
+            localStorage.setItem('expirationTime', currentTime + 30 * 60 * 1000);
+          }, 4500); 
+        }
+    }
 
     useEffect(()=>{
-        setTimeout(() => {
-            setloading(false);
-        }, 7000);
+        loadedPages();
         storyDataHandller();
     },[])
     
@@ -161,10 +176,7 @@ export default function Home(){
                     }
                 </div>
                 <div>
-                    <Body1/>
-                </div>
-                <div>
-                    <ServicesProvided data ={productList}/>
+                    <BodyContainerSection />
                 </div>
                 <div className="Product-home-section-1">
                     <h2 data-aos="fade-left" className="font-lalehar text-center mb-4 pt-3">محصولات ما</h2>
@@ -175,6 +187,12 @@ export default function Home(){
                         ))
                     }
                     </div>
+                </div>
+                <div>
+                    <ServicesProvided data ={productList}/>
+                </div>
+                <div>
+                    <Body1/>
                 </div>
                 <div>
                     <Honors />

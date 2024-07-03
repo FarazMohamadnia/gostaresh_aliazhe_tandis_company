@@ -133,7 +133,10 @@
   box-shadow: -5px -4px 10px 1px #ff0000;
 }
 
-.hidden-section-servicesPage img{
+.hidden-section-servicesPage-img{
+  background-image: url('../../asset/img/Logo/logo2.png');
+  background-size: 120%;
+  background-position: center;
   width: 140px;
   height: 140px;
   border: 1px solid black;

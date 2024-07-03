@@ -3,14 +3,16 @@
 }
 
 .parallax-bg{
-    background-image: url('../../asset/img/Logo/imgLogo.jpg');
-    position: absolute;
+    background-image: url('../../asset/img/header/headerImg1.jpg');
+    background-color: black;
+    position:absolute;
     left: 0;
     top: 0;
     width: 130%;
     height: 100%;
     -webkit-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 

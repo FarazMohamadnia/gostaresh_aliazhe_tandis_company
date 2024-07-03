@@ -3,7 +3,7 @@ import Footer from '../../components/footer/footer'
 import Navbarr from '../../components/navbar/Navbar'
 import './servicesPage.css'
 
-import img from '../../asset/img/Logo/imgLogo.jpg'
+import img from '../../asset/img/Logo/logo2.png'
 import { useState } from 'react'
 import axios from 'axios'
 import { getusers } from '../../services/api/ApiConfig'
@@ -25,6 +25,7 @@ export default function ServicesPage(){
 
     const sendData =async ()=>{
         setBtnContoller(true)
+        try{
         const response = await axios.post(getusers , data);
         setBtnContoller(false)
         if(response.status == 201){
@@ -32,7 +33,9 @@ export default function ServicesPage(){
                 title:'اطلاعات شما با موفقیت ارسال شد',
                 icon:'success'
             })
-        }else{
+        }
+        }catch(err){
+            setBtnContoller(false)
             Swal.fire({
                 title:'مشکلی در ارسال اطلاعات شما پیش آمده ،لطفا دوباره امتحان کنید',
                 icon:'error'
@@ -47,7 +50,7 @@ export default function ServicesPage(){
                 <Col className='d-none d-lg-block' lg={5}>
                     <div className='bg-dark w-100 h-100'>
                         <div className='hidden-section-servicesPage font-lalehar'>
-                            <img src={img} />
+                            <div className='hidden-section-servicesPage-img'></div>
                             <h3>شرکت گسترش آلیاژ تندیس</h3>
                             <p className='w-75 mt-2'>برای دریافت خدمات ، مشاوره و استعلام قیمت اطلاعات خود را وارد کنید تا در سریع ترین زمان با شما تماس بگیریم</p>
                         </div>

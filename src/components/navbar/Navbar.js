@@ -13,7 +13,7 @@ function Navbarr() {
     <>
         <Navbar expand={'md'} className="navbar-body-style mb-1">
           <Container fluid>
-            <Navbar.Brand className='font-lalehar'><img src={Logo} className='logo-image-style' /> گسترش آلیاژ تندیس
+            <Navbar.Brand className='font-lalehar fs-3'><img src={Logo} className='logo-image-style' /> گسترش آلیاژ تندیس
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'md'}`} />
             <Navbar.Offcanvas
@@ -29,17 +29,17 @@ function Navbarr() {
               <Offcanvas.Body className='navbar-md-backgroundColor'>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavDropdown
-   className='text-light font-lalehar'
-   title="راه های ارتباطی"
-   id={`offcanvasNavbarDropdown-md-${'md'}`}
- >
- <div className='NavDropdown-body-style'>
-   <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
-   <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
-   <NavDropdown.Divider />
-   <NavDropdown.Item href="">۰۹۱۲۰۷۰۹۸۲۲</NavDropdown.Item>
- </div>
- </NavDropdown>
+                  className='text-light font-lalehar'
+                  title="راه های ارتباطی"
+                  id={`offcanvasNavbarDropdown-md-${'md'}`}
+                >
+                <div className='NavDropdown-body-style'>
+                  <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
+                  <NavDropdown.Item href="">۷۷۷۱۳۰۳۴ ۰۲۱</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="">۰۹۱۲۰۷۰۹۸۲۲</NavDropdown.Item>
+                </div>
+                </NavDropdown>
                   <NavLink className='font-lalehar align-self-start' to="/"><FaHome />-خانه</NavLink>
                   <NavLink className='font-lalehar align-self-start' to="/product"><FaCartPlus />-محصولات</NavLink>
                   <NavLink className='font-lalehar align-self-start' to="/services"><FaEnvelopeOpenText /> -ارائه خدمات</NavLink>
