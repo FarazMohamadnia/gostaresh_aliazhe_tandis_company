@@ -1,5 +1,11 @@
 .product-page-background{
     background: linear-gradient(to top , gray , black ,white);
+    position: relative;
+}
+
+.product-container-style-1{
+  height: 40rem;
+  overflow-y: scroll;
 }
 
 .ui-input-container {
@@ -71,5 +77,41 @@
 .ui-input-icon svg {
   width: 20px;
   height: 20px;
+}
+
+.filter-product-Btn{
+  width: 150px;
+  background-color: rgb(232, 232, 232);
+  padding: 5px;
+  margin: auto;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.product-page-filter-body-style{
+  text-align: center;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: black;
+  position:fixed;
+  z-index: 10;
+  color: white;
+  transition: 1s;
+}
+
+.product-filter-list-style{
+  overflow-y: scroll;
+  background-color: rgba(157, 157, 157, 0.18);
+  border-right: 2px solid white;
+  height:40rem;
+  color: white;
+}
+
+@media (max-width : 768px) {
+  .product-container-style-1{
+    height: 100%;
+    overflow-y: auto;
+  }
 }
   

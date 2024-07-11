@@ -101,7 +101,6 @@ export default function Dashboard(){
             ...SendProduct ,
             [name] : value
         })
-        console.log(SendProduct)
     }
 
     //post data
@@ -151,6 +150,7 @@ export default function Dashboard(){
         formData.append('title', SendProduct.title);
         formData.append('text', SendProduct.text);
         formData.append('image', SendProduct.image);
+        formData.append('type', SendProduct.type);
         try{
         const response = await axios.post(getProduct, formData , {
             headers :{
@@ -467,6 +467,7 @@ export default function Dashboard(){
                                 <div className='d-md-flex justify-content-between'>
                                     <Form.Control name='title' onChange={productHandller} className='form-controller-size m-3 w-75 mx-auto' type="text" placeholder="عنوان را محصول بنویسید" />
                                     <Form.Control name='text' onChange={productHandller} className='form-controller-size m-3 w-75 mx-auto' type="text" placeholder="توضیحات محصول را بنویسید" />
+                                    <Form.Control name='type' onChange={productHandller} className='form-controller-size m-3 w-75 mx-auto' type="text" placeholder="تایپ محصول را وارد کنید (مثال : ماسه یا فرو آلیاژ) " />
                                 </div> 
                                 <div className='image-form-controller'>
                                     <p className='text-light text-center fs-5'>آپلود فایل</p>

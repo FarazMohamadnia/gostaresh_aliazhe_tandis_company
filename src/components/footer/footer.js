@@ -54,7 +54,7 @@ export default function Footer(){
     return(
         <div className='bg-black'>
             <div className='footer-body-style flex-sm-wrap-reverse font-lalehar'>
-                <Col className='footer-form-style' sm={12} md={4} lg={4}>
+                <Col className='footer-form-style' sm={12} md={12} lg={4}>
                     <Form>
                         <Form.Label><TbMessageCircle2Filled />-ارسال پیام به ما</Form.Label>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -66,7 +66,7 @@ export default function Footer(){
                         <Button onClick={commentSendHandller} disabled={deactiveBTN} className='w-100'>ارسال پیام</Button>
                     </Form>
                 </Col>
-                    <Col className='footer-text-style' sm={6} md={3}>
+                    <Col className='footer-text-style' sm={6} md={6} lg={4}>
                         <p>صفحه ها</p>
                         <div>
                             <Link to={'/'}><p><FaHome />-خانه</p></Link>
@@ -74,7 +74,7 @@ export default function Footer(){
                             <Link to={'/services'}><p><FaEnvelopeOpenText /> -ارائه خدمات</p></Link>
                         </div>
                     </Col>
-                    <Col className='footer-text-style' sm={6} md={3}>
+                    <Col className='footer-text-style' sm={6} md={5} lg={3}>
                         <p>شبکه های اجتماعی</p>
                         <div>
                             <Link to={'https://www.instagram.com/gostareshaliazh?igsh=cG43bjBtbnMyc3dv'}><p><FaInstagram />-اینستاگرام</p></Link>
@@ -86,7 +86,7 @@ export default function Footer(){
             <div className='text-light p-3 font-lalehar d-sm-flex flex-sm-row-reverse'>
                 <Col sm={6} className='p-2'>
                     <p>آدرس : تهران، تهرانپارس، فلکه اول، خیابان برادران قانع، پلاک 39، واحد 9 </p>
-                    <div className='d-flex justify-content-around d-md-block '>
+                    <div className='d-flex justify-content-between d-md-block '>
                         <p>تلفن : 02177713034 </p>
                         <p>تلفن : 02177713035 </p>
                         <p>شماره موبایل : 09120709822</p>
