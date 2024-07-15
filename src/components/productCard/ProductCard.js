@@ -7,7 +7,7 @@ AOS.init();
 
 export default function ProductCard({title , text , image}){
     return(
-        <div data-aos="zoom-in" className='product-card-body-style font-lalehar m-1'>
+        <div className='product-card-body-style font-lalehar m-1'>
             <div style={{
                 backgroundImage:`url(${image})`
             }} className='image-body-style'></div>
