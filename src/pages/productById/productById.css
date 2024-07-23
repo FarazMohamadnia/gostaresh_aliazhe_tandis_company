@@ -1,0 +1,55 @@
+.ProductById-body-style{
+    width: 85%;
+    max-width: 900px;
+    min-width: 230px;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    border-radius: 10px;
+}
+
+.ProductById-top-items{
+    max-width: 900px;
+}
+
+.ProductById-call-buttom{
+    display: block;
+    margin: 15px auto;
+    padding: 8px;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px 1px red;
+    background-color: rgba(255, 0, 0, 0.75);
+    border-radius: 16px 8px;
+    transition: 1s;
+}
+
+.ProductById-call-buttom a{
+    text-decoration: none;
+    color: white
+}
+
+.ProductById-call-buttom:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.ProductById-call-image{
+    max-width: 900px;
+    margin: 15px auto;
+    display: block;
+    width: 100%;
+    border-radius: 27px;
+    box-shadow: 0px 0px 10px 2px rgb(255, 0, 0);
+    border: 2px dashed rgb(0, 0, 0);
+}
+
+.ProductById-bottom-section-link{
+    overflow-x:scroll;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.61);
+    width: 100%;
+    height: 20rem;
+}

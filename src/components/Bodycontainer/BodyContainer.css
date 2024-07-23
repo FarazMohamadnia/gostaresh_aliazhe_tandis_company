@@ -9,7 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    @media (min-width : 1000px) {
+    @media (min-width : 1300px) {
         background-position: left;
         text-align: right;
         height: 33rem;
@@ -18,7 +18,7 @@
 }
 
 .body-background-center-section{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.654);
     margin: auto;
     width: 100%;
     height: 100%;
@@ -26,9 +26,9 @@
     color: white;
     text-align: center;
     padding: 20px 10% 0px 10%;
-    @media (min-width : 1000px) {
+    @media (min-width : 1300px) {
         background-color: rgba(0, 0, 0, 0);
-        width: 47%;
+        width: 37%;
         margin-right:0px;
         padding: 0px;
         display: flex;

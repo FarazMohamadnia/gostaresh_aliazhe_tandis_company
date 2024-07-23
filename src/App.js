@@ -8,6 +8,7 @@ import Dashboard from "./pages/ownerPages/ownerDashboard/ownerDashboard";
 import {Helmet} from "react-helmet";
 
 import img from '../src/asset/img/Logo/imgLogo.jpg'
+import ProductById from "./pages/productById/productById";
 function App() {
   return(
     <BrowserRouter>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/product" element={<ProductsPage />} />
+        <Route path="/product/:id" element={<ProductById />} />
         <Route path="/owner/login" element={<Login />} />
         <Route path="/owner/dashboard" element={<Dashboard />} />
       </Routes>

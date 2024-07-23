@@ -1,7 +1,5 @@
 import{Col} from 'react-bootstrap'
 import './body1.css'
-import img from '../../asset/img/Logo/imgLogo.jpg'
-import ownerImg from '../../asset/img/homePageImages/ownerImg/ownerImg.jpg'
 import aboutUsImg from '../../asset/img/homePageImages/aboutUsImage/backgroundImg.jpg'
 import teamImg from '../../asset/img/homePageImages/aboutUsImage/aboutUs.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';

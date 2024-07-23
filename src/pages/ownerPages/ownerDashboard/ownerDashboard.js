@@ -33,6 +33,7 @@ export default function Dashboard(){
     const [loadingStory , setloadingStory]= useState(false);
     const [loadingProducts , setloadingProducts]= useState(false);
     const [imageUrl, setimageUrl] = useState('');
+    const [imageUrl2, setimageUrl2] = useState('');
     const [imageUrlStory , setimageUrlStory ] = useState({})
     const [uploadImg , setuploadImg] = useState(false);
     const [deactiveBtn , setdeactiveBtn] = useState(false);
@@ -55,11 +56,15 @@ export default function Dashboard(){
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
+        const file2 = event.target.files[1];
+        const objectUrl = URL.createObjectURL(file2);
+        setimageUrl2(objectUrl)
         if (file) {
             setuploadImg(true)
             setSendProduct({
                 ...SendProduct ,
-                image : file
+                image : file ,
+                image2 :file2
             });
             console.log(SendProduct)
             const reader = new FileReader();
@@ -150,6 +155,7 @@ export default function Dashboard(){
         formData.append('title', SendProduct.title);
         formData.append('text', SendProduct.text);
         formData.append('image', SendProduct.image);
+        formData.append('image2', SendProduct.image2);
         formData.append('type', SendProduct.type);
         try{
         const response = await axios.post(getProduct, formData , {
@@ -472,7 +478,8 @@ export default function Dashboard(){
                                 <div className='image-form-controller'>
                                     <p className='text-light text-center fs-5'>آپلود فایل</p>
                                     <img className={!imageUrl == ' ' ? 'd-flex' : 'd-none'} src={imageUrl}/>
-                                    <input disabled={uploadImg} onChange={handleImageUpload} className='d-block' type="file" name="img"/>
+                                    <img className={!imageUrl2 == ' ' ? 'd-flex mt-4' : 'd-none'} src={imageUrl2}/>
+                                    <input disabled={uploadImg} onChange={handleImageUpload} className='d-block' type="file" name="img" multiple/>
                                     <button disabled={deactiveBtn} onClick={PostProducts} className='d-block'>{loadingProducts ? 'لطفا صبر کنید' : 'ارسال اطلاعات'} </button>
                                 </div>
                             </div>

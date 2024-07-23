@@ -41,7 +41,7 @@ export default function Honors(){
 
     return(
         <div className='honors-body-style text-light'>
-            <h3 data-aos="fade-left" className='font-lalehar text-center py-4'>نمایشگاه مواد اولیه ریخته گری</h3>
+            <h3 data-aos="fade-left" className='font-lalehar text-center py-4'>نمایشگاه بین المللی ایران متافو</h3>
             <div className='mb-5'>
                 <Swiper
                   slidesPerView={1}

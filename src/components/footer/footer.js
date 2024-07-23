@@ -97,7 +97,7 @@ export default function Footer(){
                 </Col>
             </div>
             <div className='text-center p-4 end-footer-content font-lalehar'>
-                 این وب سایت به صورت اختصاصی برای شرکت گسترش آلیاژ تندیس ساخته شده 
+            تمامی حقوق این سایت برای گسترش آلیاژ تندیس محفوظ می باشد 
             </div>
         </div>
     )
