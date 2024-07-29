@@ -4,7 +4,7 @@ import Navbarr from '../../components/navbar/Navbar'
 import Loading from '../../components/loading/loading'
 import './productById.css'
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getProductById } from '../../services/api/ApiConfig';
+import { getProductById , getProduct } from '../../services/api/ApiConfig';
 import { useEffect, useState } from 'react';
 import ProductCard from '../../components/productCard/ProductCard';
 
@@ -17,7 +17,7 @@ export default function ProductById(){
 
     const getproductsData =async()=>{
         try{
-            const response = await axios.get(getProductById);
+            const response = await axios.get(getProduct);
             setproductsData(response.data.data);
         }catch(err){
             console.log(err.message);
@@ -27,7 +27,7 @@ export default function ProductById(){
     const getData =async()=>{
         setloadingTime(true)
         try{
-            const response = await axios.get(`${getProductById}/${id}`);
+            const response = await axios.get(`${getProductById}${id}`);
             const processedText = response.data.data.text.replace(/[\.,.]/g, '$&<br/>');
             setloadingTime(false)
             setdata({...response.data.data, text:processedText});

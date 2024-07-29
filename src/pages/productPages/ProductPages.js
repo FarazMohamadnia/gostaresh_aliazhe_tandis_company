@@ -6,7 +6,7 @@ import './ProductPages.css'
 import { BsJustify } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
 import axios from "axios";
-import { getProduct, searchProducts } from "../../services/api/ApiConfig";
+import { getProductById,getProduct, searchProducts } from "../../services/api/ApiConfig";
 import FilterBox from "../../components/filterBox/filterbox";
 import Col from "react-bootstrap/esm/Col";
 import Button from "react-bootstrap/esm/Button";
@@ -49,7 +49,6 @@ export default function ProductsPage(){
       setdata(response.data.data)
       const uniqueData = filterUniqueByType(response.data.data);
       setfilter(uniqueData);   
-      console.log(filter) 
     } 
 
     
